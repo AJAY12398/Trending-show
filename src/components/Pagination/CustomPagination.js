@@ -1,8 +1,8 @@
 import Pagination from '@material-ui/lab/Pagination'
-const CustomPagination = ({setPage  }) => {
+const CustomPagination = ({setPage , numOfPages = 10  }) => {
     
-    const handlePage = (e) =>{
-        setPage(e.target.innerText);
+    const handlePage = (page) =>{
+        setPage(page);
         window.scroll(0,0);
     }
     return (
@@ -16,8 +16,8 @@ const CustomPagination = ({setPage  }) => {
         }}
          >            
             <Pagination
-            onChange = {handlePage}
-            count = {10}
+            onChange ={(e) => handlePage(e.target.textContent)}
+            count = {numOfPages}
             color = "primary"
              />
         </div>

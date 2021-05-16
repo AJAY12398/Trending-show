@@ -6,9 +6,9 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import SearchIcon from '@material-ui/icons/Search';
-import FolderIcon from '@material-ui/icons/Folder'
 import MovieIcon from '@material-ui/icons/Movie';
 import TvIcon from '@material-ui/icons/Tv';
+import PlaylistPlayIcon from '@material-ui/icons/PlaylistPlay';
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -45,7 +45,7 @@ export default function SimpleBottomNavigation() {
       <BottomNavigationAction label="Movie" style = {{color:"white"}} icon={<MovieIcon/>} />
       <BottomNavigationAction label="Tv Series" style = {{color:"white"}} icon={<TvIcon />} />
       <BottomNavigationAction label="Search" style = {{color:"white"}} icon={<SearchIcon />} />
-      <BottomNavigationAction label="WatchList" style = {{color:"white"}} icon={<FolderIcon />} />
+      <BottomNavigationAction label="WatchList" style = {{color:"white"}} icon={<PlaylistPlayIcon />} />
     </BottomNavigation>
   );
 }

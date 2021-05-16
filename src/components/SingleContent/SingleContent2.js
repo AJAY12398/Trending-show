@@ -2,6 +2,7 @@ import { Badge } from '@material-ui/core'
 import {img_300  , unavailable} from  '../../Config/config';
 import Button from '@material-ui/core/Button';
 import './SingleContent.css'
+import DeleteIcon from '@material-ui/icons/Delete';
 const SingleContent2 = ({   id , release_date, media_type ,first_air_date  ,  title , name ,  poster_path , overview , vote_average , reload, setReload = f => f}) => {
 
     const deleteWatchList = () => {
@@ -22,7 +23,9 @@ const SingleContent2 = ({   id , release_date, media_type ,first_air_date  ,  ti
                 <span className = "typeof">{media_type === "tv"? "Tv Series": "Movie"}
                 <span className = "date">{release_date || first_air_date}</span>
                 </span>
-                <Button variant="contained"  onClick = {deleteWatchList} className = "btn" color="primary">Remove from List</Button>
+                <Button variant="contained"  onClick = {deleteWatchList} className = "btn" color="primary">
+                <DeleteIcon/>Remove
+                </Button>
         </div>
         
     )

@@ -27,7 +27,6 @@ const Search = () => {
     }
 };
 
-
   useEffect(() => {
     window.scroll(0, 0);
     fetchSearch();
@@ -42,9 +41,14 @@ const Search = () => {
           id="outlined-basic"
           label="Search"
           variant="filled"
-          onChange={(e) => setSerchText(e.target.value)}
+          onChange={(e) => 
+          {
+            setSerchText(e.target.value)
+            fetchSearch();
+            }}
         />
-        <Button color="primary" onClick = {fetchSearch}>
+        <Button color="primary" onClick = {fetchSearch} >
+        
           <SearchIcon />
         </Button>
       </div>
@@ -70,7 +74,7 @@ const Search = () => {
               {...c}
             />
           ))}
-        {searchText &&!content &&
+        {searchText && !content &&
           (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)
           }
       </div>

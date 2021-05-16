@@ -11,11 +11,14 @@ const Trending = () => {
             const {data} = await axios.get(
                 `https://api.themoviedb.org/3/trending/all/day?api_key=be27d5e930f16c035d895a7b3303b9b9&page=${page}`
             );
-            // console.log(data.results);
+            // console.log(data);
             setContent(data.results);
+
     }
     useEffect(()=>{
+        window.scroll(0,0)
         fetchTrending();
+
         // eslint-disable-next-line
     }, [page]);
     return (

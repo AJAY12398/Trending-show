@@ -20,7 +20,7 @@ const WatchList = () => {
                                 reload={reload}
                             />
                         ):
-                        <h1 style={{textAlign: "center"}}>NO movies found!! </h1>
+                            <h1 style={{textAlign: "center"}}>NO movies found!! </h1>
                         }
                 </div>
  

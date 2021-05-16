@@ -17,9 +17,10 @@ const Movies = () => {
     setNumOfPages(data.total_pages);
   };
   useEffect(() => {
+    window.scroll(0,0)
     featchMovie();
     // eslint-disable-next-line
-  },);
+  },[page]);
   return (
     <div>
       <h2 className="page_title">Top Trending Movies 🎥</h2>
@@ -34,9 +35,9 @@ const Movies = () => {
                           )
                         }
                 </div>
-                <CustomPagination
-                  setPage = {setPage}
-                />
+                {numOfPages > 1 && (
+        <CustomPagination setPage={setPage} numOfPages={numOfPages} />
+      )}
     </div>
   );
 };

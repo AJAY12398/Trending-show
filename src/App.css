@@ -7,7 +7,7 @@
     padding-bottom:60px;
     background-color:#fff;
     color:black;
-}
+}   
 .page_title{
     display: flex;
     color:#064585;
@@ -18,7 +18,6 @@
 @media(min-width:700px){
     .app{
         padding-top:30px;
-
     }
 }
 @media(min-width:1000px){

@@ -2,8 +2,8 @@ import { Badge } from '@material-ui/core'
 import {img_300  , unavailable} from  '../../Config/config';
 import Button from '@material-ui/core/Button';
 import './SingleContent.css'
-import {Link} from 'react-router-dom';
-const SingleContent = ({   id , release_date, media_type ,first_air_date  ,  title , name ,  poster_path , overview , vote_average ,c}) => {
+import AddIcon from '@material-ui/icons/Add';
+const SingleContent = ({   id , release_date, media_type ,first_air_date  ,  title , name ,  poster_path , overview , vote_average ,total_pages}) => {
         const addwatchlist = () => {
             const movie = {id , release_date, media_type ,first_air_date  ,  title , name ,  poster_path , overview , vote_average}
             const watchList = JSON.parse(localStorage.getItem("watchlist") || "[]");
@@ -21,10 +21,9 @@ const SingleContent = ({   id , release_date, media_type ,first_air_date  ,  tit
                 <span className = "typeof">{media_type === "tv"? "Tv Series": "Movie"}
                 <span className = "date">{release_date || first_air_date}</span>
                 </span>
-             {/* <Link  style = {{textDecoration: "none"}}  to = {`/watchlist/${id}`}>
-                </Link> */}
-                <Button variant="contained"  onClick = {addwatchlist} className = "btn" color="primary">Add to WatchList</Button>
-                {/* <Link to = {`watchlist${id}`}>Add to  {id}</Link> */}
+                <Button variant="contained"  onClick = {addwatchlist} className = "btn" color="primary">
+                <AddIcon></AddIcon>
+                Add to WatchList</Button>
         </div>
         
     )
